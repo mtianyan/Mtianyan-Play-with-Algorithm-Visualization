@@ -33,6 +33,7 @@ public class AlgoVisualizer {
 
     public void run(){
 
+        // 疯狂往里打点
         for(int i = 0 ; i < N ; i ++){
 
             frame.render(circle, points);

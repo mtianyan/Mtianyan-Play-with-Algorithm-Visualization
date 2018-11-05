@@ -34,15 +34,15 @@ public class AlgoVisualizer {
             frame.render(money);
             AlgoVisHelper.pause(DELAY);
 
-            // 改进1：每一帧执行的轮数
+            // 改进1：每一帧执行的轮数，由之前的一轮改为50轮重绘一次
             for(int k = 0 ; k < 50 ; k ++){
                 for(int i = 0 ; i < money.length; i ++){
                     // 改进3：允许money为负值
-                    //if(money[i] > 0){
+//                    if(money[i] > 0){
                         int j = (int)(Math.random() * money.length);
                         money[i] -= 1;
                         money[j] += 1;
-                    //}
+//                    }
                 }
             }
         }

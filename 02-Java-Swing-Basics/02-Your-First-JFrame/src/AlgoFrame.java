@@ -8,6 +8,7 @@ public class AlgoFrame extends JFrame{
 
     public AlgoFrame(String title, int canvasWidth, int canvasHeight){
 
+        // 调用父类的title，继承的JFrame构造函数原本该实现的
         super(title);
 
         this.canvasWidth = canvasWidth;

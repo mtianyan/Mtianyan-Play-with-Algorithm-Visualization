@@ -6,6 +6,6 @@ public class Main {
         int sceneHeight = 800;
         int N = 10;
 
-        AlgoVisualizer vis = new AlgoVisualizer(sceneWidth, sceneHeight, N);
+        AlgoVisualizer visualizer = new AlgoVisualizer(sceneWidth, sceneHeight, N);
     }
 }

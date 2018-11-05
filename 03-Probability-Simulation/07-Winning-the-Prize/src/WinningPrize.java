@@ -19,6 +19,7 @@ public class WinningPrize {
     }
 
     public void run(){
+        // 模拟运行
 
         int wins = 0;
         for(int i = 0 ; i < N ; i ++)
@@ -30,6 +31,7 @@ public class WinningPrize {
 
     private boolean play(){
         for(int i = 0 ; i < playTime ; i ++)
+            // 从0-1前闭后开之间均匀的数，小于0.2 的概率是20% chance为1时，if语句一定为true
             if(Math.random() < chance)
                 return true;
         return false;
@@ -39,6 +41,7 @@ public class WinningPrize {
 
         double chance = 0.2;
         int playTime = 5;
+        // 蒙特卡罗次数，每次开五个宝箱
         int N = 1000000;
 
         WinningPrize exp = new WinningPrize(chance, playTime, N);

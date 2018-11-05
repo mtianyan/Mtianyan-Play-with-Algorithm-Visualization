@@ -16,10 +16,12 @@ public class MonteCarloPiData {
         return circle;
     }
 
+    // 正方形面积
     public int getPointsNumber(){
         return points.size();
     }
 
+    // 第i个点
     public Point getPoint(int i){
         if(i < 0 || i >= points.size())
             throw new IllegalArgumentException("out of bound in getPoint!");
@@ -27,12 +29,14 @@ public class MonteCarloPiData {
         return points.get(i);
     }
 
+    // 添加新的点
     public void addPoint(Point p){
         points.add(p);
         if(circle.contain(p))
             insideCircle ++;
     }
 
+    // 估计pi大小
     public double estimatePi(){
 
         if(points.size() == 0)

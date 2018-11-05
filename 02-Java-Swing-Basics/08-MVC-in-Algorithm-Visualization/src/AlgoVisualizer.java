@@ -1,5 +1,6 @@
 import java.awt.*;
 
+// 控制层
 public class AlgoVisualizer {
 
     private Circle[] circles;   // 数据

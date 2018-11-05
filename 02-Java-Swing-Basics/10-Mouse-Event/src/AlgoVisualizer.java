@@ -26,8 +26,12 @@ public class AlgoVisualizer {
         // 初始化视图
         EventQueue.invokeLater(() -> {
             frame = new AlgoFrame("Welcome", sceneWidth, sceneHeight);
+
+            // 添加鼠标和键盘的监听器
             frame.addKeyListener(new AlgoKeyListener());
             frame.addMouseListener(new AlgoMouseListener());
+
+
             new Thread(() -> {
                 run();
             }).start();
@@ -59,11 +63,16 @@ public class AlgoVisualizer {
     }
 
     private class AlgoMouseListener extends MouseAdapter{
-
+        /**
+         * Adapter 实现鼠标按下监听
+         * @param event
+         */
         @Override
         public void mousePressed(MouseEvent event){
 
             //System.out.println(event.getPoint());
+
+            // 对于x，y进行frame的坐标位移
             event.translatePoint(0,
                     -(frame.getBounds().height - frame.getCanvasHeight()));
 

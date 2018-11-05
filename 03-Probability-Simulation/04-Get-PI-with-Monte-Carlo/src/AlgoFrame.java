@@ -2,7 +2,7 @@ import java.awt.*;
 import java.util.LinkedList;
 import javax.swing.*;
 
-public class AlgoFrame extends JFrame{
+public class  AlgoFrame extends JFrame{
 
     private int canvasWidth;
     private int canvasHeight;
@@ -32,8 +32,9 @@ public class AlgoFrame extends JFrame{
     public int getCanvasWidth(){return canvasWidth;}
     public int getCanvasHeight(){return canvasHeight;}
 
-    // data
+    // data: 蒙特卡罗数据对象
     private MonteCarloPiData data;
+
     public void render(MonteCarloPiData data){
         this.data = data;
         repaint();
@@ -59,7 +60,7 @@ public class AlgoFrame extends JFrame{
             hints.put(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
             g2d.addRenderingHints(hints);
 
-            // 具体绘制
+            // 具体绘制: 使用data
             AlgoVisHelper.setStrokeWidth(g2d, 3);
             AlgoVisHelper.setColor(g2d, AlgoVisHelper.Blue);
             Circle circle = data.getCircle();

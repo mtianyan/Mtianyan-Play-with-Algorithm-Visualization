@@ -8,6 +8,7 @@ public class AlgoVisHelper {
 
     private AlgoVisHelper(){}
 
+    // Google 材料设计的颜色
     public static final Color Red = new Color(0xF44336);
     public static final Color Pink = new Color(0xE91E63);
     public static final Color Purple = new Color(0x9C27B0);
@@ -42,12 +43,13 @@ public class AlgoVisHelper {
         g.fill(circle);
     }
 
+    // 绘制空心矩形
     public static void strokeRectangle(Graphics2D g, int x, int y, int w, int h){
 
         Rectangle2D rectangle = new Rectangle2D.Double(x, y, w, h);
         g.draw(rectangle);
     }
-
+    // 绘制实心矩形
     public static void fillRectangle(Graphics2D g, int x, int y, int w, int h){
 
         Rectangle2D rectangle = new Rectangle2D.Double(x, y, w, h);
@@ -72,16 +74,20 @@ public class AlgoVisHelper {
         }
     }
 
+    // 将一个放在工程中的图像读取出来放到窗口里，只给出左上角的坐标，不会对图像进行缩放
     public static void putImage(Graphics2D g, int x, int y, String imageURL){
 
+        // TODO: 对于图像缩放的实现
         ImageIcon icon = new ImageIcon(imageURL);
         Image image = icon.getImage();
 
         g.drawImage(image, x, y, null);
     }
 
+    // 在以center x，y为中心的位置绘制字符串
     public static void drawText(Graphics2D g, String text, int centerx, int centery){
 
+        // TODO: 字体样式等设置
         if(text == null)
             throw new IllegalArgumentException("Text is null in drawText function!");
 

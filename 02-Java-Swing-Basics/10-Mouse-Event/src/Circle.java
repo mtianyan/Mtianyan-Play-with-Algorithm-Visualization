@@ -35,6 +35,7 @@ public class Circle {
     }
 
     public boolean contain(Point p){
+        // 如果点击点是否在圆内，这个点到圆心的距离是否小于r
         return (x - p.x) * (x - p.x) + (y - p.y) * (y - p.y) <= r * r;
     }
 

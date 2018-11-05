@@ -4,8 +4,9 @@ public class MonteCarloExperiment {
 
     private int squareSide;
     private int N;
-    private int outputInterval = 100;
+    private int outputInterval = 10000;
 
+    // 边长，投入多少点
     public MonteCarloExperiment(int squareSide, int N){
 
         if(squareSide <= 0 || N <= 0)
@@ -30,6 +31,7 @@ public class MonteCarloExperiment {
 
         for(int i = 0 ; i < N ; i ++){
 
+            // 每隔100轮更新一次
             if( i % outputInterval == 0) {
                 System.out.println(data.estimatePi());
             }
@@ -43,7 +45,7 @@ public class MonteCarloExperiment {
     public static void main(String[] args) {
 
         int squareSide = 800;
-        int N = 10000000;
+        int N = 1000000000;
 
         MonteCarloExperiment exp = new MonteCarloExperiment(squareSide, N);
         exp.setOutputInterval(100000);

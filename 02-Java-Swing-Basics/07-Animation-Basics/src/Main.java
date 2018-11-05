@@ -16,6 +16,8 @@ public class Main {
         for(int i = 0 ; i < N ; i ++ ) {
             int x = (int)(Math.random()*(sceneWidth-2*R)) + R;
             int y = (int)(Math.random()*(sceneHeight-2*R)) + R;
+
+            // 速度-5到+5之间 （0-10)
             int vx = (int)(Math.random()*11) - 5;
             int vy = (int)(Math.random()*11) - 5;
             circles[i] = new Circle(x, y, R, vx, vy);
@@ -28,7 +30,8 @@ public class Main {
                 while(true) {
                     // 绘制数据
                     frame.render(circles);
-                    AlgoVisHelper.pause(20);
+                    // 间隔
+                    AlgoVisHelper.pause(10);
 
                     // 更新数据
                     for(Circle circle : circles)

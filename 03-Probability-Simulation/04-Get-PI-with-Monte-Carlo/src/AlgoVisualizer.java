@@ -17,6 +17,7 @@ public class AlgoVisualizer {
 
         this.N = N;
         Circle circle = new Circle(sceneWidth/2, sceneHeight/2, sceneWidth/2);
+        // 初始化数据
         data = new MonteCarloPiData(circle);
 
         // 初始化视图
@@ -31,6 +32,7 @@ public class AlgoVisualizer {
 
     public void run(){
 
+        // TODO: 不从头绘制
         for(int i = 0 ; i < N ; i ++){
 
             if( i % 100 == 0) {

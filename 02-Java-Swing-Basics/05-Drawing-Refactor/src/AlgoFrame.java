@@ -47,7 +47,8 @@ public class AlgoFrame extends JFrame{
 
             Graphics2D g2d = (Graphics2D)g;
 
-            // 具体绘制
+            // 具体绘制，先实心后空心。
+            // 把具体绘制的工具和绘制什么分离开。绘制用到的工具放进了helper工具类中，我们只需要在Frame中指定我们要绘制什么。
             AlgoVisHelper.setColor(g2d, Color.BLUE);
             AlgoVisHelper.fillCircle(g2d, canvasWidth/2,canvasHeight/2,200);
 

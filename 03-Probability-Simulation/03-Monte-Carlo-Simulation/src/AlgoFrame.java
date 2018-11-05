@@ -32,7 +32,7 @@ public class AlgoFrame extends JFrame{
     public int getCanvasWidth(){return canvasWidth;}
     public int getCanvasHeight(){return canvasHeight;}
 
-    // data
+    // data 传入圆和点的坐标
     private Circle circle;
     private LinkedList<Point> points;
     public void render(Circle circle, LinkedList<Point> points){

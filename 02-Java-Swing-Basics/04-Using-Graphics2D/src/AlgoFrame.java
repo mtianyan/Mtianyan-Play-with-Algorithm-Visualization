@@ -39,15 +39,19 @@ public class AlgoFrame extends JFrame{
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
 
+            // 转换为Graphics2D进行绘制
             Graphics2D g2d = (Graphics2D)g;
 
             int strokeWidth = 5;
             g2d.setStroke(new BasicStroke(strokeWidth, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
 
+
             g2d.setColor(Color.RED);
+            // 浮点数性能高，但是double可以省去转换
             Ellipse2D circle = new Ellipse2D.Double(50, 50, 300, 300);
             g2d.draw(circle);
 
+            // 基于状态的绘图直到改变颜色状态
             g2d.setColor(Color.BLUE);
             Ellipse2D circle2 = new Ellipse2D.Double(50, 50, 300, 300);
             g2d.fill(circle2);

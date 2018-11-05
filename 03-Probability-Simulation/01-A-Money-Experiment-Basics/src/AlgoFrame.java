@@ -39,7 +39,7 @@ public class AlgoFrame extends JFrame{
     public int getCanvasWidth(){return canvasWidth;}
     public int getCanvasHeight(){return canvasHeight;}
 
-    // data
+    // data: 传入的money数组
     int[] money;
     public void render(int[] money){
         this.money = money;
@@ -67,10 +67,12 @@ public class AlgoFrame extends JFrame{
             g2d.addRenderingHints(hints);
 
             // 具体绘制
-            AlgoVisHelper.setColor(g2d, AlgoVisHelper.Blue);
+            AlgoVisHelper.setColor(g2d, AlgoVisHelper.Green);
 
+            // 计算矩形的宽
             int w = canvasWidth / money.length;
             for(int i = 0 ; i < money.length ; i ++)
+                // 矩形之间留一点边距，坐标为iw+1 整体左移，每个宽度都减去1
                 AlgoVisHelper.fillRectangle(g2d,
                         i*w+1, canvasHeight-money[i], w-1, money[i]);
 

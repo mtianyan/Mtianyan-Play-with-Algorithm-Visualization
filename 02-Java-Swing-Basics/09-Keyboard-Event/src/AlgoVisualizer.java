@@ -45,9 +45,14 @@ public class AlgoVisualizer{
     }
 
     private class AlgoKeyListener extends KeyAdapter{
+        /**
+         * 实现自己的方法
+         * @param event
+         */
 
         @Override
         public void keyReleased(KeyEvent event){
+            // 用户按键弹起的时候触发， 用户按的是空格
             if(event.getKeyChar() == ' ')
                 isAnimated = !isAnimated;
         }

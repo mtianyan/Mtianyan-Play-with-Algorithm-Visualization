@@ -15,7 +15,9 @@ public class ThreeGatesExperiment {
 
         int wins = 0;
         for(int i = 0 ; i < N ; i ++)
+            // 换门还是不换门
             if(play(changeDoor))
+                // 是否中奖
                 wins ++;
 
         System.out.println(changeDoor ? "Change" : "Not Change");
@@ -29,8 +31,10 @@ public class ThreeGatesExperiment {
         int playerChoice = (int)(Math.random() * 3);
 
         if( playerChoice == prizeDoor)
+            // 最初的选择是正确的，一旦换门会导致失败
             return changeDoor ? false : true;
         else
+            // 最初的选择是错误的，一旦换门会成功
             return changeDoor ? true : false;
     }
 

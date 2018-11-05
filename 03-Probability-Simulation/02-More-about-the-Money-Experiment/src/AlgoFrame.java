@@ -69,6 +69,7 @@ public class AlgoFrame extends JFrame{
             // 具体绘制
             int w = canvasWidth / money.length;
             for(int i = 0 ; i < money.length ; i ++)
+                // 是否破产
                 if(money[i] > 0) {
                     AlgoVisHelper.setColor(g2d, AlgoVisHelper.Blue);
                     AlgoVisHelper.fillRectangle(g2d,
@@ -77,6 +78,7 @@ public class AlgoFrame extends JFrame{
                 else{
                     AlgoVisHelper.setColor(g2d, AlgoVisHelper.Red);
                     AlgoVisHelper.fillRectangle(g2d,
+                            // 此时y值是中线那条线
                             i * w + 1, canvasHeight / 2, w - 1, -money[i]);
                 }
         }
